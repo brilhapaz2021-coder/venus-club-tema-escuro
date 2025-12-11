@@ -1,0 +1,172 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.75rem;
+  
+  /* VENUS CLUB - Theme Light (cores invertidas suaves) */
+  --background: #F6F2F7;
+  --foreground: #1A0A1F;
+  --surface: #FFFFFF;
+  --primary: #D1007A;
+  --primary-foreground: #FFFFFF;
+  --accent-gold: #FFB039;
+  
+  /* Gradient accent colors - extraídas do logo */
+  --gradient-start: #00FFB3;
+  --gradient-mid: #00CFEA;
+  --gradient-mid2: #D1007A;
+  --gradient-end: #FF007A;
+  
+  /* Additional font families for AI usage */
+  --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-roboto: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-open-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-source-code: "Source Code Pro", ui-monospace, SFMono-Regular, monospace;
+  --font-fira-code: "Fira Code", ui-monospace, SFMono-Regular, monospace;
+  --font-jetbrains: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --card: #FFFFFF;
+  --card-foreground: #1A0A1F;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A0A1F;
+  --secondary: #F0E6F5;
+  --secondary-foreground: #1A0A1F;
+  --muted: #E8DFF0;
+  --muted-foreground: #6B5F73;
+  --accent: #FFE8F5;
+  --accent-foreground: #D1007A;
+  --destructive: #DC2626;
+  --border: #E0D0E8;
+  --input: #E0D0E8;
+  --ring: #D1007A;
+  --chart-1: #00FFB3;
+  --chart-2: #00CFEA;
+  --chart-3: #D1007A;
+  --chart-4: #FF007A;
+  --chart-5: #FFB039;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1A0A1F;
+  --sidebar-primary: #D1007A;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #FFE8F5;
+  --sidebar-accent-foreground: #D1007A;
+  --sidebar-border: #E0D0E8;
+  --sidebar-ring: #D1007A;
+}
+
+.dark {
+  /* VENUS CLUB - Theme Dark (padrão) - cores do logo */
+  --background: #1A0A1F;
+  --foreground: #F6F2F7;
+  --surface: #2A1533;
+  --primary: #D1007A;
+  --primary-foreground: #FFFFFF;
+  --accent-gold: #FFB039;
+  
+  /* Gradient accent colors - extraídas do logo */
+  --gradient-start: #00FFB3;
+  --gradient-mid: #00CFEA;
+  --gradient-mid2: #D1007A;
+  --gradient-end: #FF007A;
+  
+  --card: #2A1533;
+  --card-foreground: #F6F2F7;
+  --popover: #2A1533;
+  --popover-foreground: #F6F2F7;
+  --secondary: #3D2447;
+  --secondary-foreground: #F6F2F7;
+  --muted: #3D2447;
+  --muted-foreground: #A89BAF;
+  --accent: #4D2E5C;
+  --accent-foreground: #F6F2F7;
+  --destructive: #EF4444;
+  --border: #3D2447;
+  --input: #3D2447;
+  --ring: #D1007A;
+  --chart-1: #00FFB3;
+  --chart-2: #00CFEA;
+  --chart-3: #D1007A;
+  --chart-4: #FF007A;
+  --chart-5: #FFB039;
+  --sidebar: #2A1533;
+  --sidebar-foreground: #F6F2F7;
+  --sidebar-primary: #D1007A;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #4D2E5C;
+  --sidebar-accent-foreground: #F6F2F7;
+  --sidebar-border: #3D2447;
+  --sidebar-ring: #D1007A;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* VENUS CLUB - Gradient Utilities (cores do logo) */
+.gradient-accent {
+  background: linear-gradient(135deg, #00FFB3 0%, #00CFEA 25%, #D1007A 50%, #FF007A 75%, #FFB039 100%);
+}
+
+.gradient-accent-text {
+  background: linear-gradient(135deg, #00FFB3 0%, #00CFEA 25%, #D1007A 50%, #FF007A 75%, #FFB039 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-accent-border {
+  border-image: linear-gradient(135deg, #00FFB3 0%, #00CFEA 25%, #D1007A 50%, #FF007A 75%, #FFB039 100%) 1;
+}
+
+/* Gradient simplificado para botões */
+.gradient-venus {
+  background: linear-gradient(135deg, #00CFEA 0%, #D1007A 50%, #FF007A 100%);
+}
